@@ -1,442 +1,188 @@
 /////////////////////////////////////////////////////////////////////////////////
-///Initialising variables
-/////////////////////////////////////////////////////////////////////////////////
-
-const { debug } = require("console");
-
-//1.1
-const number1 = 1;
-console.log(number1);
-const number2 = 2;
-console.log(number2);
-const number3 = 3;
-console.log(number3);
-console.log("");
-
-//1.2
-const word1 = "word";
-console.log(word1);
-const word2 = "also word";
-console.log(word2);
-const word3 = "maybe not a word";
-console.log(word3);
-console.log("");
-
-//1.3
-const numberSet1 = [1, 2, 3];
-console.log(numberSet1);
-const numberSet2 = [4, 5, 6];
-console.log(numberSet2);
-const numberSet3 = [7, 8, 9];
-console.log(numberSet3);
-console.log("");
-
-//1.4
-const wordSet1 = ["word", "set"];
-console.log(wordSet1);
-const wordSet2 = ["also", "a", "word", "set"];
-console.log(wordSet2);
-const wordSet3 = ["actually", "not", "a", "word", "set"];
-console.log(wordSet3);
-console.log("");
-console.log("");
-console.log("");
-
-
-
-/////////////////////////////////////////////////////////////////////////////////
-///Actions with variables
-/////////////////////////////////////////////////////////////////////////////////
-
-//2.1
-const numberSum1 = number1 + number2 + number3;
-console.log(numberSum1);
-console.log("");
-
-//2.2
-const wordSum1 = word1 + " " + word2 + " " + word3;
-console.log(wordSum1);
-console.log("");
-
-//2.3
-const numberSum2 = numberSet1[0] + numberSet1[1] - numberSet1[2] + 
-    numberSet2[0] - numberSet2[1] + numberSet2[2] - 
-    numberSet3[0] + numberSet3[1] - numberSet3[2];
-console.log(numberSum2);
-console.log("");
-
-//2.4
-const wordSum2 = wordSet1[0] + ", " + wordSet1[1] + ", " + 
-wordSet2[0] + ", " + wordSet2[1] + ", " + wordSet2[2] + ", " + wordSet2[3] + ", " + 
-wordSet3[0] + ", " + wordSet3[1] + ", " + wordSet3[2] + ", " + wordSet3[3] + ", " + wordSet3[4] + ".";
-console.log(wordSum2);
-console.log("");
-console.log("");
-console.log("");
-
-
-
-/////////////////////////////////////////////////////////////////////////////////
-///Comparing variables
-/////////////////////////////////////////////////////////////////////////////////
-
-//3.1
-//a
-if (number1 > number2)
-{
-    if (number1 > number3)
-        console.log(number1);
-    else
-        console.log(number3);
-}
-else
-{
-    if (number2 > number3)
-        console.log(number2);
-    else
-        console.log(number3);
-}
-
-//b
-if (number1 < number2)
-{
-    if (number1 < number3)
-        console.log(number1);
-    else
-        console.log(number3);
-}
-else
-{
-    if (number2 < number3)
-        console.log(number2);
-    else
-        console.log(number3);
-}
-
-//c
-if (number1 == number2)
-    console.log("tomato");
-else
-console.log("try again");
-
-//d
-if (number2 != number3)
-    console.log("tomato");
-else
-    console.log("try again");
-
-//e
-if (number1 >= number2)
-    console.log(number1);
-if (number2 >= number1)
-    console.log(number2);
-//yes, a second if statment, because both numbers can satisfy a "which one is EQUAL TO or more than"
-
-//f
-if (number2 >= number3)
-console.log(number1);
-if (number3 >= number2)
-console.log(number2);
-console.log("");
-
-//3.2
-console.log(word1.length);
-console.log(word2.length);
-console.log(word3.length);
-console.log("");
-
-//3.3
-if (word1.length > word2.length)
-{
-    if (word1.length > word3.length)
-        console.log(number1);
-    else
-        console.log(word3.length);
-}
-else
-{
-    if (word2.length > word3.length)
-        console.log(word2.length);
-    else
-        console.log(word3.length);
-}
-console.log("...etc. The rest is basically just pressing ctrl+c and ctrl+v");
-console.log("");
-
-//3.4
-console.log(wordSet1.length);
-console.log(wordSet2.length);
-console.log(wordSet3.length);
-console.log("");
-
-//3.5
-if (wordSet1.length < wordSet2.length)
-    console.log(wordSet1.length);
-else
-    console.log(wordSet2.length);
-//the condition is less, because I'm testing single-line if statement stuff
-console.log("...etc. Onwards and upwards!");
-console.log("");
-console.log("");
-console.log("");
-
-
-
-/////////////////////////////////////////////////////////////////////////////////
-///Use of the for loop
-/////////////////////////////////////////////////////////////////////////////////
-
-//4.1
-//a
-let numberSum3 = 0;
-for (let i = 0; i < 0; i++)
-    numberSum3 = numberSum3 + i;
-console.log(numberSum3);
-
-//b
-let numberSum4 = 0;
-for (let i = 0; i < 5; i++)
-    numberSum4 = numberSum4 + i;
-console.log(numberSum4);
-
-//c
-let numberSum5 = 0;
-for (let i = 0; i < 101; i++)
-    numberSum5 = numberSum5 + i;
-console.log(numberSum5);
-
-//d
-let numberSum6 = 0;
-for (let i = 574; i < 816; i++)
-    numberSum6 = numberSum6 + i;
-console.log(numberSum6);
-
-//e
-let numberSum7 = 0;
-for (let i = -50; i < 51; i++)
-    numberSum7 = numberSum7 + i;
-console.log(numberSum7);
-
-//f
-let numberSum8 = 0;
-for (let i = -70; i < 31; i++)
-    numberSum8 = numberSum8 + i;
-console.log(numberSum8);
-console.log("");
-
-//4.2
-let reverseWord = "";
-for (let i = 0; i < word1.length; i++)
-    reverseWord = reverseWord + word1.charAt(word1.length - i - 1);
-console.log(reverseWord);
-console.log("");
-
-//4.3
-//a
-let divisiblesBy3_1 = 0;
-let divisiblesBy5_1 = 0;
-let divisiblesBy7_1 = 0;
-
-for (let i = 0; i < 12; i++)
-{
-    if( !(i % 3))
-        divisiblesBy3_1++;
-}
-console.log("In the set 0 - 11 (inc), there are " + divisiblesBy3_1 + " numbers divisible by 3");
-
-for (let i = 0; i < 12; i++)
-{
-    if( !(i % 5))
-        divisiblesBy5_1++;
-}
-console.log("In the set 0 - 11 (inc), there are " + divisiblesBy5_1 + " numbers divisible by 5");
-
-for (let i = 0; i < 12; i++)
-{
-    if( !(i % 7))
-        divisiblesBy7_1++;
-}
-console.log("In the set 0 - 11 (inc), there are " + divisiblesBy7_1 + " numbers divisible by 7");
-console.log("===");
-
-//b
-let divisiblesBy3_2 = 0;
-let divisiblesBy5_2 = 0;
-let divisiblesBy7_2 = 0;
-
-for (let i = 8; i < 32; i++)
-{
-    if( !(i % 3))
-        divisiblesBy3_2++;
-}
-console.log("In the set 8 - 31 (inc), there are " + divisiblesBy3_2 + " numbers divisible by 3");
-
-for (let i = 8; i < 32; i++)
-{
-    if( !(i % 5))
-        divisiblesBy5_2++;
-}
-console.log("In the set 8 - 31 (inc), there are " + divisiblesBy5_2 + " numbers divisible by 5");
-
-for (let i = 8; i < 32; i++)
-{
-    if( !(i % 7))
-        divisiblesBy7_2++;
-}
-console.log("In the set 8 - 31 (inc), there are " + divisiblesBy7_2 + " numbers divisible by 7");
-console.log("===");
-
-//c
-let divisiblesBy3_3 = 0;
-let divisiblesBy5_3 = 0;
-let divisiblesBy7_3 = 0;
-
-for (let i = -18; i < 19; i++)
-{
-    if( !(i % 3))
-        divisiblesBy3_3++;
-}
-console.log("In the set -18 - 18 (inc), there are " + divisiblesBy3_3 + " numbers divisible by 3");
-
-for (let i = -18; i < 19; i++)
-{
-    if( !(i % 5))
-        divisiblesBy5_3++;
-}
-console.log("In the set -18 - 18 (inc), there are " + divisiblesBy5_3 + " numbers divisible by 5");
-
-for (let i = -18; i < 19; i++)
-{
-    if( !(i % 7))
-        divisiblesBy7_3++;
-}
-console.log("In the set -18 - 18 (inc), there are " + divisiblesBy7_3 + " numbers divisible by 7");
-console.log("");
-console.log("");
-console.log("");
-
-
-
-/////////////////////////////////////////////////////////////////////////////////
-///Functions
+///Paste these into mar30.js
 /////////////////////////////////////////////////////////////////////////////////
 
 //1
-function emptyFunction()
+function numberMorality(n)
 {
-    return false;
+    if (n >= 0)
+        return "Good";
+    else
+        return "Bad";
 }
-console.log(emptyFunction());
+console.log(numberMorality(-1));
+console.log(numberMorality(0));
+console.log(numberMorality(1));
 console.log("");
 
 //2
-function multiplication(n1, n2)
+function trafficLights(n)
 {
-    result = n1 * n2;
-    return result;
+    if (n === "green" || n === "Green")
+        return "Go";
+    else if (n === "yellow" || n === "red" || n === "Yellow" || n === "Red")
+        return "Wait";
+    else
+        return "That's not a traffic light colour";
 }
-console.log( multiplication(number1, number2) );
-console.log( multiplication(number3, number2) );
-console.log( multiplication(number1, number3) );
+console.log(trafficLights("Yellow"));
+console.log(trafficLights("green"));
+console.log(trafficLights(3));
 console.log("");
 
-//3
-function numberOfDigits(n)
-{
-    if (typeof n != "number")
-        return "Invalid data type";
-    if ((n * 0) != 0)
-        return "Invalid data type";
-    
-    let nLength = 1;
 
-    while (n > 10)
-    {
-        n = n / 10;
-        nLength++;
-    }
-    return nLength;
+//3
+function bookStorage(d, k, n)
+{
+    if ((d * n) < k)
+        return "The books won't fit";
+    else
+        return "The books will fit";
 }
-console.log(numberOfDigits(5));
-console.log(numberOfDigits(781));
-console.log(numberOfDigits(37060123456));
-console.log(numberOfDigits(true));
-console.log(numberOfDigits("asd"));
-console.log(numberOfDigits(NaN));
+console.log(bookStorage(2, 8, 5));
+console.log(bookStorage(3, 18, 5));
 console.log("");
 
 //4
-function largestOf(n)
+function equalise(a, b)
 {
-    if (!(Array.isArray(n)))
-        return "Input has to be an array";
-    if (n.length == 0)
-        return "The array cannot be empty";
-
-    let largestN = n[0];
-    for (let i = 1; i < n.length; i++)
+    if (a > b)
     {
-        if (largestN < n[i])
-            largestN = n[i];
+        a--;
+        b++
     }
-    return largestN;
+    if (b > a)
+    {
+        a++;
+        b--;
+    }
+    const result = "a = " + a + " b = " + b;
+    return result;
 }
-console.log( largestOf( [1] ) );
-console.log( largestOf( [1, 2, 3] ) );
-console.log( largestOf( [-5, 78, 14, 0, 18] ) );
-console.log( largestOf( [69, 69, 69, 69, 66] ) );
-console.log( largestOf( [-1, -2, -3, -4, -5, -6, -7, -8] ) );
-console.log( largestOf( "tomato" ) );
-console.log( largestOf( [] ) );
+console.log(equalise(5, 6));
 console.log("");
 
 //5
-function pickOutLetters(string1, n)
+function iceCream(c, p)
 {
-    if (typeof string1 != "string")
-        return "First variable must be a string";
-    if (string1.length < 1 || string1.length > 100)
-        return "First variable has invalid length";
-    if (typeof n != "number" || (n * 0) != 0)
-        return "Second variable must be a number";
-    if (n < 1)
-        return "Second variable must be greater than 0";
-    if (n > string1.length)
-        return "Second variable must be less than the length of first variable";
-
-    let shorterString = "";
-
-    for (let i = 0; i < string1.length; i++)
-    {
-        if ( (i+1) % n == 0)
-            shorterString = shorterString + string1.charAt(i);
-    }
-    return shorterString;
+    const k = c / p;
+    const m = c % p;
+    const result = "Creams of ice: " + Math.floor(k) + "  Leftover money: " + m;
+    return result;
 }
-console.log( pickOutLetters("abcdefg", 2) );
-console.log( pickOutLetters("abcdefghijkl", 3) );
-console.log( pickOutLetters("abc", 0) );
-console.log( pickOutLetters("abc", 4) );
-console.log( pickOutLetters(1561, 2) );
+console.log(iceCream(50, 20));
 console.log("");
 
 //6
-function division(n1, n2)
+function matches(n)
 {
-    if (typeof n1 != "number" || (n1 * 0) != 0)
-        return "The first variable must be a number";
-    if (typeof n2 != "number" || (n2 * 0) != 0)
-        return "The second variable must be a number";
-    if (n2 == 0)
-        return "The second variable must not be a zero";
-
-    let result = n1 / n2;
-    return result;
+    if (n % 3)
+        return "No triangles are to be found in this forsaken realm";
+    else
+        return "A triangle!";
 }
+console.log(matches(4));
+console.log(matches(6));
+console.log("");
 
-console.log( division(10, 5) );
-console.log( division(-10, 4) );
-console.log( division(8, 0) );
-console.log( division("abc", 5) );
-console.log( division(NaN, 6) );
-console.log( division(-8, false) );
+//7
+function month(n)
+{
+    switch (n)
+    {
+        case 1:
+            return 31;
+            break;
+        case 2:
+            return 28;
+            break;
+        case 3:
+            return 31;
+            break;
+        case 4:
+            return 30;
+            break;
+        case 5:
+            return 31;
+            break;
+        case 6:
+            return 30;
+            break;
+        case 7:
+            return 31;
+            break;
+        case 8:
+            return 31;
+            break;
+        case 9:
+            return 30;
+            break;
+        case 10:
+            return 31;
+            break;
+        case 11:
+            return 30;
+            break;
+        case 12:
+            return 31;
+            break;
+        default:
+            return "I'm not aware of that kind of callendar";
+            break;
+    }
+}
+console.log(month(5));
+console.log(month(2));
+console.log("");
+
+//8
+function room(k)
+{
+    if (k < 1 || k > 5)
+        return "That's not a 6-sided die result";
+    if (k % 2)
+        return "Junior";
+    else
+        return "Senior";
+}
+console.log(room(1));
+console.log(room(4));
+console.log("");
+
+//9
+function olympics(m)
+{
+    if (m < 1896)
+        return "Olympics hadn't been invented yet. What's a 'Greece'?";
+    if (m % 4)
+        return "Not an olympic year";
+    else
+        return (m - 1892) / 4;
+}
+console.log(olympics(1904));
+console.log(olympics(2005));
+console.log("");
+
+//10
+function isPeterLate(v1, m1, m2, v, m)
+{
+    m1 += m2;
+    while (m1 > 59)
+    {
+       m1 -= 60;
+       v1++;
+    }
+    if (v1 > v)
+        return "LATE!"
+    if (v1 < v)
+        return "On time!"
+    if (v1 === v)
+    {
+        if (m1 > m)
+            return "LATE!"
+        else
+            return "On time!"
+    }
+}
+console.log(isPeterLate(8, 29, 43, 9, 5));
+console.log(isPeterLate(8, 29, 23, 9, 5));
