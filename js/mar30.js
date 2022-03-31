@@ -1,8 +1,10 @@
 //1
 function numberMorality(n)
 {
-    if (n >= 0)
+    if (n > 0)
         return "Good";
+    else if (n === 0)
+        return "Neutral";
     else
         return "Bad";
 }
@@ -14,9 +16,9 @@ console.log("");
 //2
 function trafficLights(n)
 {
-    if (n === "green" || n === "Green")
+    if (n === 1)
         return "Go";
-    else if (n === "yellow" || n === "red" || n === "Yellow" || n === "Red")
+    else if (n === 2 || n === 3)
         return "Wait";
     else
         return "That's not a traffic light colour";
@@ -134,7 +136,7 @@ console.log("");
 //8
 function room(k)
 {
-    if (k < 1 || k > 5)
+    if (k < 1 || k > 6)
         return "That's not a 6-sided die result";
     if (k % 2)
         return "Junior";
@@ -142,7 +144,7 @@ function room(k)
         return "Senior";
 }
 console.log(room(1));
-console.log(room(4));
+console.log(room(6));
 console.log("");
 
 //9
