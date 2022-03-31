@@ -18,14 +18,17 @@ function trafficLights(n)
 {
     if (n === 1)
         return "Go";
-    else if (n === 2 || n === 3)
+    else if (n === 2)
         return "Wait";
+    else if (n === 3)
+        return "Stop";
     else
         return "That's not a traffic light colour";
 }
-console.log(trafficLights("Yellow"));
-console.log(trafficLights("green"));
+console.log(trafficLights(1));
+console.log(trafficLights(2));
 console.log(trafficLights(3));
+console.log(trafficLights(4));
 console.log("");
 
 
