@@ -321,6 +321,12 @@ console.log("");
 ///Functions
 /////////////////////////////////////////////////////////////////////////////////
 
+//0
+function isActuallyANumber(n)
+{
+    return (typeof n === "number" && n * 0 === 0);
+}
+
 //1
 function emptyFunction()
 {
@@ -343,17 +349,16 @@ console.log("");
 //3
 function numberOfDigits(n)
 {
-    if (typeof n != "number")
-        return "Invalid data type";
-    if ((n * 0) != 0)
+    if (!isActuallyANumber(n))
         return "Invalid data type";
     
-    let nLength = 1;
+    let nLength = 0;
+    let nS = n.toString();
 
-    while (n > 10)
+    for (let i = 0; i < nS.length; i++)
     {
-        n = n / 10;
-        nLength++;
+        if (nS[i] * 0 == "0")
+            nLength++;
     }
     return nLength;
 }
@@ -363,6 +368,11 @@ console.log(numberOfDigits(37060123456));
 console.log(numberOfDigits(true));
 console.log(numberOfDigits("asd"));
 console.log(numberOfDigits(NaN));
+console.log(numberOfDigits(Infinity));
+console.log(numberOfDigits(3.14));
+console.log(numberOfDigits(-50));
+console.log(numberOfDigits(0.000000000000001)); //out of scope of this task. Solve if we feel like
+console.log(numberOfDigits(1000000000000000));
 console.log("");
 
 //4
@@ -373,12 +383,16 @@ function largestOf(n)
     if (n.length == 0)
         return "The array cannot be empty";
 
-    let largestN = n[0];
-    for (let i = 1; i < n.length; i++)
+    let largestN = -Infinity;
+    for (let i = 0; i < n.length; i++)
     {
+        if (isActuallyANumber(n))
+            continue;
         if (largestN < n[i])
             largestN = n[i];
     }
+    if (largestN === -Infinity)
+        return "Error";
     return largestN;
 }
 console.log( largestOf( [1] ) );
@@ -388,6 +402,8 @@ console.log( largestOf( [69, 69, 69, 69, 66] ) );
 console.log( largestOf( [-1, -2, -3, -4, -5, -6, -7, -8] ) );
 console.log( largestOf( "tomato" ) );
 console.log( largestOf( [] ) );
+console.log( largestOf( ['x'] ) );
+console.log( largestOf( ['x', 'x', -3, -4, -5, -6, -7, -8] ) );
 console.log("");
 
 //5
@@ -397,7 +413,7 @@ function pickOutLetters(string1, n)
         return "First variable must be a string";
     if (string1.length < 1 || string1.length > 100)
         return "First variable has invalid length";
-    if (typeof n != "number" || (n * 0) != 0)
+    if (!isActuallyANumber(n))
         return "Second variable must be a number";
     if (n < 1)
         return "Second variable must be greater than 0";
@@ -423,11 +439,11 @@ console.log("");
 //6
 function division(n1, n2)
 {
-    if (typeof n1 != "number" || (n1 * 0) != 0)
+    if (!isActuallyANumber(n1))
         return "The first variable must be a number";
-    if (typeof n2 != "number" || (n2 * 0) != 0)
+    if (!isActuallyANumber(n2))
         return "The second variable must be a number";
-    if (n2 == 0)
+    if (n2 === 0)
         return "The second variable must not be a zero";
 
     let result = n1 / n2;
@@ -438,5 +454,7 @@ console.log( division(10, 5) );
 console.log( division(-10, 4) );
 console.log( division(8, 0) );
 console.log( division("abc", 5) );
+console.log( division("5", 5) );
 console.log( division(NaN, 6) );
 console.log( division(-8, false) );
+console.log( division(-8, Infinity) );
