@@ -8,6 +8,7 @@
     "mar29": "nodemon ./js/mar29.js",
     "mar30": "nodemon ./js/mar30.js",
     "apr1": "nodemon ./js/apr01.js",
+    "apr6": "nodemon ./js/apr06.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
