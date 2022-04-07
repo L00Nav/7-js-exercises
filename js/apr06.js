@@ -20,12 +20,14 @@ console.log('');
 //2
 function div7()
 {
-    let sum = getRandomInt(10);
-    while (sum % 7)
+    let sum = 0;
+    
+    do
     {
         sum += getRandomInt(10);
         console.log(sum);
     }
+    while (sum % 7)
 }
 div7();
 console.log('');
@@ -50,7 +52,7 @@ console.log('');
 //4
 function randTill5 ()
 {
-    let n = 0;
+    let n;
     while (n != 5)
     {
         n = getRandomInt(10);
@@ -63,7 +65,7 @@ console.log('');
 //5
 function randTill5or7 ()
 {
-    let n = 0;
+    let n;
     let cycles = 0;
     while (n != 5 && n != 7)
     {

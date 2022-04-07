@@ -126,3 +126,6 @@ let testRadio = new Radio("Radio-01", 0, 300, 20, [["station1", 50], ["station2"
 testRadio.adjustVolume(10);
 testRadio.turnOn();
 testRadio.adjustWaveLength(50);
+
+
+
